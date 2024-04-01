@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Hey New Project
+
+Pages: >> Home.Page.jsx (Default.Hoc.jsx) >> Movie.Page.jsx (Movie.Hoc.jsx) >> Play.Page.jsx (Default.Hoc.jsx)
+
+HOCs/Layouts:
+>> Default.Hoc.jsx >> Movie.Hoc.jsx
+
+Components: >> Cast Cast.Component.jsx >> Entertainment EntertainmentCard.Component.jsx >> HeroCarousel HeroCarousel.Component.jsx Arrows.Component.jsx >> MovieHero MovieHero.Component.jsx MovieInfo.Component.jsx >> Navbar Navbar.Componenet.jsx MovieNavbar.Component.jsx >> PaymenModal PaymentComponent.jsx >> PlayFilters Filters.Componenet.jsx >> Poster Poster.Componenet.jsx >> PosterSlider PosterSliderComponenet.jsx
+
+npx create-react-app .
+
+API_KEY=3f613ae2d81a6a8bbaf8c27937c8ce7a
+
+URL FOR AVENGERS =https://api.themoviedb.org/3/search/movie?api_key=3f613ae2d81a6a8bbaf8c27937c8ce7a&query=Avengers
+
+
+URL TOP RATED=https://api.themoviedb.org/3/movie/top_rated?api_key=3f613ae2d81a6a8bbaf8c27937c8ce7a&language=en-US&page=1
