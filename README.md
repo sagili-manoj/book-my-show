@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# BookMyShow Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the BookMyShow Clone project! This is a React-based web application that mimics the functionality of the popular ticketing platform, BookMyShow. It includes multiple components, a payment integration (test mode), and uses APIs to fetch movie data.
 
-## Available Scripts
+## Features
+- **Movie Display**: Displays movies and their details using the TMDB API.
+- **Top-Rated Movies**: Displays a list of top-rated movies.
+- **Payment Integration**: Test-mode payment functionality using Razorpay.
+- **Responsive Design**: The app is designed to work seamlessly on various screen sizes.
 
-In the project directory, you can run:
+## Important Notes
+- **Payment is in Test Mode**: Do not use real payment details. Use Razorpay's test credentials for payment simulation.
+- **API Limitations**: Some images or data may not load due to API restrictions or rate limits.
+- **Missing Functionalities**: Search functionality and user authentication are not implemented yet.
 
-### `npm start`
+## How to Run the App
+Follow these steps to set up and run the project on your local machine:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js and npm installed on your machine.
+- A code editor (e.g., Visual Studio Code).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Steps
+#### Clone the Repository:
+```bash
+git clone https://github.com/sagilimanoj/book-my-show.git
+cd book-my-show
+```
 
-### `npm test`
+#### Install Dependencies:
+Install all the required dependencies using npm:
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Start the Application:
+Run the app in development mode:
+```bash
+npm start
+```
+The app will open in your default browser at `http://localhost:3000`.
 
-### `npm run build`
+## Project Structure
+Here’s a brief overview of the project structure:
+```plaintext
+book-my-show/
+├── public/              # Static assets
+├── src/                 # Source code
+│   ├── components/      # Reusable components
+│   │   ├── Cast/        # Cast related components
+│   │   ├── Entertainment/ # Entertainment related components
+│   │   ├── HeroCarousel/ # Hero carousel components
+│   │   ├── MovieHero/   # Movie hero section components
+│   │   ├── Navbar/      # Navigation bar components
+│   │   ├── PaymentModal/ # Payment modal components
+│   │   ├── PlayFilters/ # Play filters components
+│   │   ├── Poster/      # Poster components
+│   │   └── PosterSlider/ # Poster slider components
+│   ├── context/         # Context providers
+│   │   └── Movie.context.js # Movie context
+│   ├── layout/          # Layout components
+│   │   ├── Default.layout.js # Default layout
+│   │   └── Movie.layout.js # Movie layout
+│   ├── pages/           # Main pages of the app
+│   │   ├── Home.page.js # Home page
+│   │   ├── Movie.page.js # Movie page
+│   │   └── Play.page.js # Play page
+│   ├── App.css          # Main CSS file
+│   ├── App.js           # Main application component
+│   ├── index.css        # Global styles
+│   └── index.js         # Entry point
+├── .gitignore           # Specifies files to ignore in Git
+├── package-lock.json    # Lock file for dependencies
+├── package.json         # Project dependencies and scripts
+└── README.md            # Project documentation
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Keys and Endpoints
+To fetch movie data, the app uses The Movie Database (TMDB) API. Below are the API details:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### API Key:
+```plaintext
+API_KEY=3f613ae2d81a6a8bbaf8c27937c8ce7a
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Search for Movies (e.g., Avengers):
+```plaintext
+https://api.themoviedb.org/3/search/movie?api_key=3f613ae2d81a6a8bbaf8c27937c8ce7a&query=Avengers
+```
 
-### `npm run eject`
+### Top-Rated Movies:
+```plaintext
+https://api.themoviedb.org/3/movie/top_rated?api_key=3f613ae2d81a6a8bbaf8c27937c8ce7a&language=en-US&page=1
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Missing Functionalities
+- **Search Functionality**: The ability to search for movies is not yet implemented.
+- **User Authentication**: User login and registration features are not included.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
+If you'd like to contribute to this project, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
+This project is open-source and available under the MIT License.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+- **TMDB API**: For providing movie data.
+- **Razorpay**: For payment integration in test mode.
